@@ -1,0 +1,31 @@
+% Modified from https://tinyurl.com/yxhdj5nc
+function I = jma(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
+data = dlmread(filename,delimiter,ignore_row,0);
+ns = data(:,ns_column)';
+ew = data(:,ew_column)';
+ud = data(:,ud_column)';
+fs = sample_rate;
+num = size(ns,2);
+n = 0:(num-1);
+f =  n / (num/fs) + 0.00000001;
+spec_ns = fft(ns);
+spec_ew = fft(ew);
+spec_ud = fft(ud);
+winX = sqrt(1./f);
+y = f./10;
+winY = 1./sqrt(ones(1,num) + 0.694*y.^2 + 0.241*y.^4 + 0.0557*y.^6 + 0.009664*y.^8 + 0.00134*y.^10 + 0.000155*y.^12);
+winZ = sqrt(ones(1,num) - exp(-(f./0.5).^3));
+win1 = winX.*winY.*winZ;
+win2 = fliplr(winX).*fliplr(winY).*fliplr(winZ);
+win = [win1(1:(num/2)),win2((num/2+1):num)];
+spec_ns = win.*spec_ns;
+spec_ew = win.*spec_ew;
+spec_ud = win.*spec_ud;
+res_ns=ifft(spec_ns);
+res_ew=ifft(spec_ew);
+res_ud=ifft(spec_ud);
+a = abs(sqrt(res_ns.^2 + res_ew.^2 + res_ud.^2));
+a2 = sort(a,"descend");
+i = 2 * log10(a2(floor(0.3*fs)+1)) + 0.94;
+I = floor(10*(i+0.005)) / 10;
+endfunction
