@@ -17,7 +17,12 @@ winY = 1./sqrt(ones(1,num) + 0.694*y.^2 + 0.241*y.^4 + 0.0557*y.^6 + 0.009664*y.
 winZ = sqrt(ones(1,num) - exp(-(f./0.5).^3));
 win1 = winX.*winY.*winZ;
 win2 = fliplr(winX).*fliplr(winY).*fliplr(winZ);
+if mod(num,2) == 0
 win = [win1(1:(num/2)),win2((num/2+1):num)];
+else
+nn = floor(num/2);
+win = [win1(1:nn),win1(nn+1),win2(nn+2:num)];
+endif
 spec_ns = win.*spec_ns;
 spec_ew = win.*spec_ew;
 spec_ud = win.*spec_ud;
