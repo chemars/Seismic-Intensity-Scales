@@ -16,7 +16,12 @@ f2 = (0.13 * ones(1,num) + f.^8 + 9.18 * f.^6 + 20.77 * f.^4 - 1.34 * f.^2);
 ff = f1./f2 ;
 win1 = ff;
 win2 = fliplr(ff);
+if mod(num,2) == 0
 win = [win1(1:(num/2)),win2((num/2+1):num)];
+else
+nn = floor(num/2);
+win = [win1(1:nn),win1(nn+1),win2(nn+2:num)];
+endif
 spec_ns = win.*spec_ns;
 spec_ew = win.*spec_ew;
 spec_ud = win.*spec_ud;
