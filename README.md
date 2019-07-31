@@ -32,6 +32,11 @@
 ## 聲明
 程式計算、轉換的方式與官方實際做法有所差異，得出的結果僅供參考。`cwb2000.m`是依據加速度所在區間計算震度，未使用震度與加速度的[關係式](https://scweb.cwb.gov.tw/zh-TW/Guidance/FAQdetail/37)。`jma.m`計算出的數值與日本氣象廳公布的計測震度可能有0.1的誤差。`fjea.m`沒有福建省地震局的資料可供驗證，誤差大小未知。
 
+## 授權條款
+本倉庫採用 [MIT 授權條款](https://github.com/chemars/Seismic-Intensity-Scales/blob/master/LICENSE)。
+
+[Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)內的程式碼的授權條款為CC0，[相關說明](https://github.com/statrstart/statrstart.github.io/issues/1)。
+
 ## 參考資料
 * [Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)，[GitHub repository](https://github.com/statrstart/statrstart.github.io)
 * [交通部中央氣象局地震震度分級表](https://www.cwb.gov.tw/Data/service/notice/download/notice_20141231104524.pdf)
