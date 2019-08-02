@@ -3,7 +3,7 @@
 
 ## 準備步驟
 1. 安裝 [GNU Octave](https://www.gnu.org/software/octave/)。
-2. 下載所有檔案，並另外下載觀測資料，把所有檔案放在同一目錄。
+2. 下載所有檔案，並另外下載觀測資料，資料需要包括三軸加速度訊號（單位為gal）及取樣率，把所有檔案放在同一目錄。
 3. 開啟 GNU Octave，切換到檔案所在的目錄。
 
 ## 計算與轉換
@@ -22,6 +22,8 @@
 * `scale`是將日本氣象廳的計測震度轉換為震度階級，分為0、1、2、3、4、5弱（5 Lower）、5強（5 Upper）、6弱（6 Lower）、6強（6 Upper）、7。
 
 ## 範例
+地震觀測資料來源：中央氣象局 [個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、日本氣象廳 [主な地震の強震観測データ](http://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)。
+
 以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)而言，可使用下列方式計算出震度（jma可更改為fjea、cwb2020）
 
 ```octave
@@ -60,4 +62,3 @@ ans =  5 Upper
 * [交通部中央氣象局地震震度分級表](https://www.cwb.gov.tw/Data/service/notice/download/notice_20141231104524.pdf)
 * [計測震度の算出方法](http://www.data.jma.go.jp/svd/eqev/data/kyoshin/kaisetsu/calc_sindo.htm)
 * [地震仪器烈度表](http://www.fjdspm.com/dzzt/zcfgzt/2013-03-14/231.html)
-* 觀測資料：[個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、[主な地震の強震観測データ](http://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)
