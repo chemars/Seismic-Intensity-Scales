@@ -19,20 +19,33 @@
 
 轉換程式亦為函數，呼叫格式為`scale(震度種類,震度數值)`，輸出為字串。
 
-* `scale`是將日本氣象廳的計測震度轉換為震度階級，分為0、1、2、3、4、5弱、5強、6弱、6強、7。
+* `scale`是將日本氣象廳的計測震度轉換為震度階級，分為0、1、2、3、4、5弱（5 Lower）、5強（5 Upper）、6弱（6 Lower）、6強（6 Upper）、7。
 
 ## 範例
-以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)而言，可使用下列方式計算出震度
+以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)而言，可使用下列方式計算出震度（jma可更改為fjea、cwb2020）
 
-`cwb2000("T073001.263.txt","",11,3,4,2)`、`jma("T073001.263.txt","",11,3,4,2,200)`，jma可更改為fjea、cwb2020
+```octave
+>> cwb2000("T073001.263.txt","",11,3,4,2)
+ans =  6
+>> jma("T073001.263.txt","",11,3,4,2,200)
+ans = 5.2000
+```
 
-以[日本氣象廳的檔案](http://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)而言，可使用下列方式計算出震度
+以[日本氣象廳的檔案](http://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)而言，可使用下列方式計算出震度（jma可更改為fjea、cwb2020）
 
-`cwb2000("AA06EA01.csv",",",7,1,2,3)`、`jma("AA06EA01.csv",",",7,1,2,3,100)`，jma可更改為fjea、cwb2020
+```octave
+>> cwb2000("AA06EA01.csv",",",7,1,2,3)
+ans =  6
+>> jma("AA06EA01.csv",",",7,1,2,3,100)
+ans = 5.1000
+```
 
 以日本氣象廳的計測震度而言，可使用下列方式轉換為震度階級
 
-`scale("jma",5.1)`
+```octave
+>> scale("jma",5.1)
+ans =  5 Upper
+```
 
 ## 聲明
 程式計算、轉換的方式與官方實際做法有所差異，得出的結果僅供參考。`cwb2000.m`是依據加速度所在區間計算震度，未使用震度與加速度的[關係式](https://scweb.cwb.gov.tw/zh-TW/Guidance/FAQdetail/37)。`jma.m`計算出的數值與日本氣象廳公布的計測震度可能有0.1的誤差。`fjea.m`沒有福建省地震局的資料可供驗證，誤差大小未知。`cwb2020.m`是依據中央氣象局的草案計算震度，程式尚不完整，待中央氣象局公告正式版本後修正。
