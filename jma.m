@@ -18,17 +18,17 @@ winZ = sqrt(ones(1,num) - exp(-(f./0.5).^3));
 win1 = winX.*winY.*winZ;
 win2 = fliplr(winX).*fliplr(winY).*fliplr(winZ);
 if mod(num,2) == 0
-win = [win1(1:(num/2)),win2((num/2+1):num)];
+  win = [win1(1:(num/2)),win2((num/2+1):num)];
 else
-nn = floor(num/2);
-win = [win1(1:nn),win1(nn+1),win2(nn+2:num)];
+  nn = floor(num/2);
+  win = [win1(1:nn),win1(nn+1),win2(nn+2:num)];
 endif
 spec_ns = win.*spec_ns;
 spec_ew = win.*spec_ew;
 spec_ud = win.*spec_ud;
-res_ns=ifft(spec_ns);
-res_ew=ifft(spec_ew);
-res_ud=ifft(spec_ud);
+res_ns = ifft(spec_ns);
+res_ew = ifft(spec_ew);
+res_ud = ifft(spec_ud);
 a = abs(sqrt(res_ns.^2 + res_ew.^2 + res_ud.^2));
 a2 = sort(a,"descend");
 i = 2 * log10(a2(floor(0.3*fs)+1)) + 0.94;
