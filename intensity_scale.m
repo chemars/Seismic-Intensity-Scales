@@ -1,4 +1,4 @@
-function s = scale(organization,intensity)
+function s = intensity_scale(organization,intensity)
 II = intensity;
 switch organization
   case "jma"
