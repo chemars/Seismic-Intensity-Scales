@@ -1,5 +1,5 @@
 % Modified from https://tinyurl.com/yxhdj5nc
-function I = fjea(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
+function II = fjea(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
 data = dlmread(filename,delimiter,ignore_row,0);
 ns = data(:,ns_column)';
 ew = data(:,ew_column)';
@@ -30,11 +30,11 @@ res_ew = ifft(spec_ew);
 res_ud = ifft(spec_ud);
 a = abs(sqrt(res_ns.^2 + res_ew.^2 + res_ud.^2));
 a2 = sort(a,"descend");
-i = 2.71 * log10( a2(floor(0.5*fs)+1) / 100 ) + 7.81;
-I = floor(i+0.5);
-if (I >= 13)
-  I = 12;
-elseif (I <= 0)
-  I = 1;
+ii = 2.71 * log10( a2(floor(0.5*fs)+1) / 100 ) + 7.81;
+II = floor(ii+0.5);
+if (II >= 13)
+  II = 12;
+elseif (II <= 0)
+  II = 1;
 endif
 endfunction

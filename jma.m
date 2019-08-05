@@ -1,5 +1,5 @@
 % Modified from https://tinyurl.com/yxhdj5nc
-function I = jma(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
+function II = jma(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
 data = dlmread(filename,delimiter,ignore_row,0);
 ns = data(:,ns_column)';
 ew = data(:,ew_column)';
@@ -31,6 +31,6 @@ res_ew = ifft(spec_ew);
 res_ud = ifft(spec_ud);
 a = abs(sqrt(res_ns.^2 + res_ew.^2 + res_ud.^2));
 a2 = sort(a,"descend");
-i = 2 * log10(a2(floor(0.3*fs)+1)) + 0.94;
-I = floor(10*(i+0.005)) / 10;
+ii = 2 * log10(a2(floor(0.3*fs)+1)) + 0.94;
+II = floor(10*(ii+0.005)) / 10;
 endfunction
