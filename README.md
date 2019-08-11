@@ -3,7 +3,7 @@
 
 ## 準備步驟
 1. 安裝 [GNU Octave](https://www.gnu.org/software/octave/)。
-2. 下載所有檔案，並另外下載觀測資料，資料需包括三軸加速度訊號（單位為gal）及取樣率（單位為Hz），把所有檔案放在同一目錄。
+2. 下載所有檔案，並另外下載觀測資料，資料需包括三軸加速度訊號（單位為 gal）及取樣率（單位為 Hz），把所有檔案放在同一目錄。
 3. 開啟 GNU Octave，切換到檔案所在的目錄。
 
 ## 計算與轉換
@@ -24,7 +24,7 @@
 ## 範例
 地震觀測資料來源：中央氣象局 [個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、日本氣象廳 [主な地震の強震観測データ](http://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)。
 
-以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)而言，可使用下列方式計算出震度（jma可更改為fjea、cwb2020）
+以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)而言，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
 
 ```octave
 >> cwb2000("T073001.263.txt","",11,3,4,2)
@@ -33,7 +33,7 @@ ans =  6
 ans =  5.2000
 ```
 
-以[日本氣象廳的檔案](http://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)而言，可使用下列方式計算出震度（jma可更改為fjea、cwb2020）
+以[日本氣象廳的檔案](http://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)而言，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
 
 ```octave
 >> cwb2000("AA06EA01.csv",",",7,1,2,3)
@@ -55,7 +55,7 @@ ans = 5 Upper
 ## 授權條款
 本倉庫採用 [MIT 授權條款](https://github.com/chemars/Seismic-Intensity-Scales/blob/master/LICENSE)。
 
-[Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)內的程式碼的授權條款為CC0，[相關說明](https://github.com/statrstart/statrstart.github.io/issues/1)。
+[Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)內的程式碼的授權條款為 CC0，[相關說明](https://github.com/statrstart/statrstart.github.io/issues/1)。
 
 ## 參考資料
 * [Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)，[GitHub repository](https://github.com/statrstart/statrstart.github.io)
