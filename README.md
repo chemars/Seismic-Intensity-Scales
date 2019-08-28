@@ -22,7 +22,7 @@
 * `intensity_scale`是將日本氣象廳的計測震度轉換為震度階級，分為0、1、2、3、4、5弱（5 Lower）、5強（5 Upper）、6弱（6 Lower）、6強（6 Upper）、7。
 
 ## 範例
-地震觀測資料來源：中央氣象局 [個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、日本氣象廳 [主な地震の強震観測データ](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)。
+地震觀測資料來源：中央氣象局 [個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、日本氣象廳 [強震観測データ](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)。
 
 以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)而言，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
 
