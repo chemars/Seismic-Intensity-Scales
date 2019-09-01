@@ -29,8 +29,9 @@ spec_ud = win.*spec_ud;
 res_ns = ifft(spec_ns);
 res_ew = ifft(spec_ew);
 res_ud = ifft(spec_ud);
-a = abs(sqrt(res_ns.^2 + res_ew.^2 + res_ud.^2));
-a2 = sort(a,"descend");
-ii = 2 * log10(a2(floor(0.3*fs)+1)) + 0.94;
+a0 = abs(sqrt(res_ns.^2 + res_ew.^2 + res_ud.^2));
+a1 = sort(a0,"descend");
+a2 = a1(floor(0.3*fs)+1);
+ii = 2 * log10(a2) + 0.94;
 II = floor(10*(ii+0.005)) / 10;
 endfunction
