@@ -2,7 +2,7 @@
 以地震觀測資料計算出中央氣象局（CWB）、日本氣象廳（JMA）、福建省地震局（FJEA）所使用的震度。
 
 ## 準備步驟
-1. 安裝 [GNU Octave](https://www.gnu.org/software/octave/)。（計算程式適用於 GNU Octave 5.1.0 Windows-64 版）
+1. 安裝 [GNU Octave](https://www.gnu.org/software/octave/)（計算程式適用於 GNU Octave 5.1.0 Windows-64 版）。
 2. 下載所有檔案，並另外下載觀測資料，資料需包括三軸加速度訊號（單位為 gal）及取樣率（單位為 Hz），把所有檔案放在同一目錄。
 3. 開啟 GNU Octave，切換到檔案所在的目錄。
 
