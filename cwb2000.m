@@ -1,3 +1,8 @@
+% Copyright (c) 2019 chemars
+% License: MIT License
+%
+% Calculate the CWB seismic intensity (2000)
+% See https://github.com/chemars/Seismic-Intensity-Scales
 function II = cwb2000(filename,delimiter,ignore_row,ns_column,ew_column,ud_column)
 data = dlmread(filename,delimiter,ignore_row,0);
 ns = data(:,ns_column);
