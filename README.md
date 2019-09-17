@@ -2,7 +2,7 @@
 以地震觀測資料計算出中央氣象局（CWB）、日本氣象廳（JMA）、福建省地震局（FJEA）所使用的震度。
 
 ## 準備步驟
-1. 安裝 [GNU Octave](https://www.gnu.org/software/octave/)（計算程式適用於 GNU Octave 5.1.0 Windows-64 版）。
+1. 安裝 [GNU Octave](https://www.gnu.org/software/octave/)（計算程式適用於 5.1.0 Windows-64 版）。
 2. 下載所有檔案，並另外下載觀測資料，資料需包括三軸加速度訊號（單位為 gal）及取樣率（單位為 Hz），把所有檔案放在同一目錄。
 3. 開啟 GNU Octave，切換到檔案所在的目錄。
 
@@ -50,7 +50,7 @@ ans = 5 Upper
 ```
 
 ## 聲明
-程式計算、轉換的方式與官方實際做法有所差異，得出的結果僅供參考。`cwb2000.m`是依據加速度所在區間計算震度，未使用震度與加速度的[關係式](https://scweb.cwb.gov.tw/zh-TW/Guidance/FAQdetail/37)。`jma.m`計算出的數值與日本氣象廳公布的計測震度可能有0.1的誤差。`fjea.m`沒有福建省地震局的資料可供驗證，誤差大小未知。`cwb2020.m`是依據中央氣象局的草案計算震度，程式尚未公開。
+程式計算、轉換的方式與官方實際做法有所差異，得出的結果僅供參考。`cwb2000`是依據加速度所在區間計算震度，未使用震度與加速度的[關係式](https://scweb.cwb.gov.tw/zh-TW/Guidance/FAQdetail/37)。`jma`計算出的數值與日本氣象廳公布的計測震度可能有0.1的誤差。`fjea`沒有福建省地震局的資料可供驗證，誤差大小未知。`cwb2020`是依據中央氣象局的草案計算震度，程式尚未公開。
 
 ## 授權條款
 本倉庫採用 [MIT 授權條款](https://github.com/chemars/Seismic-Intensity-Scales/blob/master/LICENSE)。
