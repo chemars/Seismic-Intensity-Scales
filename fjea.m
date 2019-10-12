@@ -3,7 +3,7 @@
 % The code is modified from https://tinyurl.com/yxhdj5nc
 %
 % Calculate the FJEA instrumental seismic intensity
-% See https://github.com/chemars/Seismic-Intensity-Scales
+% https://github.com/chemars/Seismic-Intensity-Scales
 function II = fjea(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
 data = dlmread(filename,delimiter,ignore_row,0);
 ns = data(:,ns_column)';

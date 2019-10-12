@@ -2,7 +2,7 @@
 % License: MIT License
 %
 % Convert the seismic intensity
-% See https://github.com/chemars/Seismic-Intensity-Scales
+% https://github.com/chemars/Seismic-Intensity-Scales
 function s = intensity_scale(organization,intensity)
 II = intensity;
 switch organization
