@@ -53,7 +53,7 @@ ans = 5 Upper
 
 ## 參考資料
 * [Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)，[GitHub repository](https://github.com/statrstart/statrstart.github.io)
-* [交通部中央氣象局地震震度分級表](https://www.cwb.gov.tw/Data/service/notice/download/notice_20141231104524.pdf)
+* [交通部中央氣象局有感地震報告發布作業要點](https://www.cwb.gov.tw/Data/service/notice/download/notice_20141231104524.pdf)
 * [計測震度の算出方法](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/kaisetsu/calc_sindo.htm)
 * [気象庁震度階級の解説](https://www.jma.go.jp/jma/kishou/know/shindo/jma-shindo-kaisetsu-pub.pdf)
 * [地震仪器烈度表](http://www.fjdspm.com/dzzt/zcfgzt/2013-03-14/231.html)
