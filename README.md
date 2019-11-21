@@ -19,7 +19,7 @@
 ## 範例
 地震觀測資料來源：中央氣象局 [個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、日本氣象廳 [強震観測データ](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)。
 
-以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)而言，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
+以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)為例，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
 
 ```octave
 >> cwb2000("T073001.263.txt","",11,3,4,2)
@@ -28,7 +28,7 @@ ans =  6
 ans =  5.2000
 ```
 
-以[日本氣象廳的檔案](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)而言，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
+以[日本氣象廳的檔案](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)為例，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
 
 ```octave
 >> cwb2000("AA06EA01.csv",",",7,1,2,3)
@@ -37,7 +37,7 @@ ans =  6
 ans =  5.1000
 ```
 
-以日本氣象廳的計測震度而言，可使用下列方式轉換為震度階級
+以日本氣象廳的計測震度為例，可使用下列方式轉換為震度階級
 
 ```octave
 >> intensity_scale("jma",5.1)
