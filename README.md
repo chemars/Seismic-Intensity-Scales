@@ -48,7 +48,8 @@ ans = 5 Upper
 程式計算、轉換的方式與官方實際做法有所差異，得出的結果僅供參考，實際震度應以官方發布的為準。`jma`計算出的數值與日本氣象廳公布的計測震度可能有0.1的誤差。`fjea`沒有福建省地震局的資料可供驗證，誤差大小未知。
 
 ## 授權條款
-[MIT 授權條款](https://github.com/chemars/Seismic-Intensity-Scales/blob/master/LICENSE)    
+[MIT 授權條款](https://github.com/chemars/Seismic-Intensity-Scales/blob/master/LICENSE)
+
 [Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)內的程式碼的授權條款為 CC0，[相關說明](https://github.com/statrstart/statrstart.github.io/issues/1)。
 
 ## 參考資料
