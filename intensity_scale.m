@@ -18,13 +18,13 @@ switch organization
     elseif (II >= 3.5 && II < 4.5)
       s = "4";
     elseif (II >= 4.5 && II < 5.0)
-      s = "5 Lower";
+      s = "5-";
     elseif (II >= 5.0 && II < 5.5)
-      s = "5 Upper";
+      s = "5+";
     elseif (II >= 5.5 && II < 6.0)
-      s = "6 Lower";
+      s = "6-";
     elseif (II >= 6.0 && II < 6.5)
-      s = "6 Upper";
+      s = "6+";
     elseif (II >= 6.5)
       s = "7";
     endif
