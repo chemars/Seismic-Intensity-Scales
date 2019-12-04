@@ -14,12 +14,12 @@
 * `fjea`對應的震度為福建省地震局的地震儀器烈度，分為1度至12度，程式碼修改自[Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)。
 
 另有震度轉換程式（亦為函數），呼叫格式為`intensity_scale(震度種類,震度數值)`，輸出為字串。
-* `intensity_scale`是將日本氣象廳的計測震度轉換為震度階級，日本氣象廳震度階級分為0、1、2、3、4、5弱（5 Lower）、5強（5 Upper）、6弱（6 Lower）、6強（6 Upper）、7。
+* `intensity_scale`是將日本氣象廳的計測震度轉換為震度階級，日本氣象廳震度階級分為0、1、2、3、4、5弱（5-）、5強（5+）、6弱（6-）、6強（6+）、7。
 
 ## 範例
 地震觀測資料來源：中央氣象局 [個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、日本氣象廳 [強震観測データ](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)。
 
-以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)為例，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
+以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)為例，可使用下列方式計算出震度（jma 可更改為 fjea）
 
 ```octave
 >> cwb2000("T073001.263.txt","",11,3,4,2)
@@ -28,7 +28,7 @@ ans =  6
 ans =  5.2000
 ```
 
-以[日本氣象廳的檔案](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)為例，可使用下列方式計算出震度（jma 可更改為 fjea、cwb2020）
+以[日本氣象廳的檔案](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)為例，可使用下列方式計算出震度（jma 可更改為 fjea）
 
 ```octave
 >> cwb2000("AA06EA01.csv",",",7,1,2,3)
@@ -41,11 +41,13 @@ ans =  5.1000
 
 ```octave
 >> intensity_scale("jma",5.1)
-ans = 5 Upper
+ans = 5+
 ```
 
 ## 聲明
 程式計算、轉換的方式與官方實際做法有所差異，得出的結果僅供參考，實際震度應以官方發布的為準。`jma`計算出的數值與日本氣象廳公布的計測震度可能有0.1的誤差。`fjea`沒有福建省地震局的資料可供驗證，誤差大小未知。
+
+`cwb2020`尚未定案，隨時可能有所修改。
 
 ## 授權條款
 [MIT 授權條款](https://github.com/chemars/Seismic-Intensity-Scales/blob/master/LICENSE)
