@@ -43,13 +43,13 @@ elseif (pga >= 80.0)
   if (pgv < 15)
     II = "4";
   elseif (pgv >= 15 && pgv < 30)
-    II = "5";
+    II = "5-";
   elseif (pgv >= 30 && pgv < 50)
-    II = "5.5";
+    II = "5+";
   elseif (pgv >= 50 && pgv < 80)
-    II = "6";
+    II = "6-";
   elseif (pgv >= 80 && pgv < 140)
-    II = "6.5";
+    II = "6+";
   elseif (pgv >= 140)
     II = "7";
   endif
