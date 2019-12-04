@@ -3,21 +3,13 @@
 %
 % Calculate the new CWB seismic intensity (take effect on 2020-01-01)
 % https://github.com/chemars/Seismic-Intensity-Scales
-##function II = cwb2020(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
-clear all; close all; clc;
-data = dlmread("fdata.txt");
-ns = data(:,3);
-ew = data(:,4);
-ud = data(:,2);
-fs = 200;
-
+function II = cwb2020(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
 pkg load signal
-##data = dlmread(filename,delimiter,ignore_row,0);
-##ns = data(:,ns_column);
-##ew = data(:,ew_column);
-##ud = data(:,ud_column);
-##fs = sample_rate;
-
+data = dlmread(filename,delimiter,ignore_row,0);
+ns = data(:,ns_column);
+ew = data(:,ew_column);
+ud = data(:,ud_column);
+fs = sample_rate;
 [b,a] = butter(4,10/(fs/2),"low");
 ns_f = filter(b,a,ns);
 ew_f = filter(b,a,ew);
@@ -63,4 +55,4 @@ elseif (pga >= 80.0)
   endif
 endif
 II
-##endfunction
+endfunction
