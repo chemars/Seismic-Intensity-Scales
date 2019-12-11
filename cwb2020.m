@@ -15,8 +15,7 @@ ns_f = filter(b,a,ns);
 ew_f = filter(b,a,ew);
 ud_f = filter(b,a,ud);
 tf = sqrt(ns_f.^2 + ew_f.^2 + ud_f.^2);
-pga = max(tf)
-
+pga = max(tf);
 if (pga < 0.8)
   II = "0";
 elseif (pga >= 0.8 && pga < 2.5)
@@ -39,7 +38,7 @@ elseif (pga >= 80.0)
   ew_vf = filter(bb,aa,ew_v);
   ud_vf = filter(bb,aa,ud_v);
   tvf = sqrt(ns_vf.^2 + ew_vf.^2 + ud_vf.^2);
-  pgv = max(tvf)
+  pgv = max(tvf);
   if (pgv < 15)
     II = "4";
   elseif (pgv >= 15 && pgv < 30)
@@ -54,5 +53,4 @@ elseif (pga >= 80.0)
     II = "7";
   endif
 endif
-II
 endfunction
