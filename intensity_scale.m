@@ -29,8 +29,8 @@ switch organization
       s = "7";
     endif
   case "cwb2020"
-    s = "coming soon";
+    s = "Not available";
   otherwise
-    s = "error";
+    s = "Error";
 endswitch
 endfunction
