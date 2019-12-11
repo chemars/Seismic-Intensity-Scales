@@ -47,8 +47,6 @@ ans = 5+
 ## 聲明
 程式計算、轉換的方式與官方實際做法有所差異，得出的結果僅供參考，實際震度應以官方發布的為準。`jma`計算出的數值與日本氣象廳公布的計測震度可能有0.1的誤差。`fjea`沒有福建省地震局的資料可供驗證，誤差大小未知。
 
-`cwb2020`有部分計算細節尚待確認，程式尚未完成。
-
 ## 授權條款
 [MIT 授權條款](https://github.com/chemars/Seismic-Intensity-Scales/blob/master/LICENSE)
 
@@ -56,8 +54,8 @@ ans = 5+
 
 ## 參考資料
 * [Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)，[GitHub repository](https://github.com/statrstart/statrstart.github.io)
-* [交通部中央氣象局有感地震報告發布作業要點](https://www.cwb.gov.tw/Data/service/notice/download/notice_20141231104524.pdf)（中華民國103年12月22日中象地字第1030015380號函修正）
-* [交通部中央氣象局有感地震報告發布作業要點](https://www.cwb.gov.tw/Data/service/notice/download/notice_20191205110829.pdf)（中華民國108年12月2日中象地字第1080016036號函修正）
+* [交通部中央氣象局有感地震報告發布作業要點](https://www.cwb.gov.tw/Data/service/notice/download/notice_20141231104524.pdf)（中華民國103年12月22日中象地字第1030015380號函修正）
+* [交通部中央氣象局有感地震報告發布作業要點](https://www.cwb.gov.tw/Data/service/notice/download/notice_20191210113759.pdf)（中華民國108年12月2日中象地字第1080016036號函修正）
 * [計測震度の算出方法](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/kaisetsu/calc_sindo.htm)
 * [気象庁震度階級の解説](https://www.jma.go.jp/jma/kishou/know/shindo/jma-shindo-kaisetsu-pub.pdf)
 * [地震仪器烈度表](http://www.fjdspm.com/dzzt/zcfgzt/2013-03-14/231.html)
