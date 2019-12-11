@@ -26,6 +26,8 @@
 ans =  6
 >> jma("T073001.263.txt","",11,3,4,2,200)
 ans =  5.2000
+>> cwb2020("T073001.263.txt","",11,3,4,2,200)
+ans = 6-
 ```
 
 以[日本氣象廳的檔案](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)為例，可使用下列方式計算出震度（jma 可更改為 fjea）
@@ -35,6 +37,8 @@ ans =  5.2000
 ans =  6
 >> jma("AA06EA01.csv",",",7,1,2,3,100)
 ans =  5.1000
+>> cwb2020("AA06EA01.csv",",",7,1,2,3,100)
+ans = 5-
 ```
 
 以日本氣象廳的計測震度為例，可使用下列方式轉換為震度階級
