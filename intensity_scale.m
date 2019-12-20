@@ -29,7 +29,7 @@ switch organization
       s = "7";
     endif
   case "cwb2020"
-    s = "Not available";
+    s = "Not Available";
   otherwise
     s = "Error";
 endswitch
