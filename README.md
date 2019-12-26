@@ -17,7 +17,7 @@
 * `intensity_scale`是將日本氣象廳的計測震度轉換為震度階級，日本氣象廳震度階級分為0、1、2、3、4、5弱、5強、6弱、6強、7。
 
 ## 範例
-地震觀測資料來源：中央氣象局 [個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、日本氣象廳 [強震観測データ](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)。
+地震觀測資料來源：中央氣象局 [個案地震報導](https://scweb.cwb.gov.tw/zh-tw/page/disaster/3)、日本氣象廳 [強震観測データ](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/index.html)
 
 以[中央氣象局的檔案](https://scweb.cwb.gov.tw/special/19990921/ASCIIfile/T073001.263.txt)為例，可使用下列方式計算出震度（jma 可更改為 fjea）
 
@@ -54,7 +54,7 @@ ans = 5+
 ## 授權條款
 [MIT 授權條款](https://github.com/chemars/Seismic-Intensity-Scales/blob/master/LICENSE)
 
-[Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)內的程式碼的授權條款為 CC0，[相關說明](https://github.com/statrstart/statrstart.github.io/issues/1)。
+[Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)內的程式碼的授權條款為 CC0（[相關說明](https://github.com/statrstart/statrstart.github.io/issues/1)）
 
 ## 參考資料
 * [Rで計測震度の算出](http://statrstart.github.io/2015/04/19/R%E3%81%A7%E8%A8%88%E6%B8%AC%E9%9C%87%E5%BA%A6%E3%81%AE%E7%AE%97%E5%87%BA/)，[GitHub repository](https://github.com/statrstart/statrstart.github.io)
