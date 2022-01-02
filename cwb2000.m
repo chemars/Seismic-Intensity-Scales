@@ -1,4 +1,4 @@
-% Copyright (c) 2019-2020 chemars
+% Copyright (c) 2019-2022 chemars
 % License: MIT License
 %
 % Calculate the CWB seismic intensity (promulgated and revised on 2000-08-01)

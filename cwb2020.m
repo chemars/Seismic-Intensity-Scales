@@ -1,4 +1,4 @@
-% Copyright (c) 2019-2020 chemars
+% Copyright (c) 2019-2022 chemars
 % License: MIT License
 %
 % Calculate the new CWB seismic intensity (take effect on 2020-01-01)
