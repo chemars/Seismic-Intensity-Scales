@@ -4,7 +4,7 @@
 中央氣象局地震震度計算與繪圖的整合版本請參考 https://github.com/chemars/Seismic-Intensity
 
 ## 準備步驟
-1. 安裝 [GNU Octave](https://www.gnu.org/software/octave/)（計算程式適用於 5.1.0 Windows-64 版）。
+1. 安裝 [GNU Octave](https://www.gnu.org/software/octave/)（計算程式適用於 Windows-64 版）。
 2. 下載所有檔案，並另外下載觀測資料，觀測資料需包括三軸加速度訊號（單位為 gal）及取樣率（單位為 Hz），把所有檔案放在同一目錄。
 3. 開啟 GNU Octave，切換到檔案所在的目錄。
 
