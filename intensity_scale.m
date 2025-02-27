@@ -1,4 +1,4 @@
-% Copyright (c) 2019-2022 chemars
+% Copyright (c) 2019-2025 chemars
 % License: MIT License
 %
 % Convert the seismic intensity
