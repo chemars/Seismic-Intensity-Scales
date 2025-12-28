@@ -28,7 +28,7 @@ switch organization
     elseif (II >= 6.5)
       s = "7";
     endif
-  case "cwb2020"
+  case "cwa2020"
     s = "Not Available";
   otherwise
     s = "Error";

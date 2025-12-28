@@ -1,9 +1,9 @@
 % Copyright (c) 2019-2025 chemars
 % License: MIT License
 %
-% Calculate the new CWB seismic intensity (take effect on 2020-01-01)
+% Calculate the new CWA seismic intensity (take effect on 2020-01-01)
 % https://github.com/chemars/Seismic-Intensity-Scales
-function II = cwb2020(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
+function II = cwa2020(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
 pkg load signal
 data = dlmread(filename,delimiter,ignore_row,0);
 ns = data(:,ns_column);
