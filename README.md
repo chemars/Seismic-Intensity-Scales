@@ -35,11 +35,11 @@ ans = 6-
 以[日本氣象廳的檔案](https://www.data.jma.go.jp/svd/eqev/data/kyoshin/jishin/001006_tottori-seibu/dat/AA06EA01.csv)為例，可使用下列方式計算出震度（jma 可更改為 fjea）
 
 ```octave
->> cwb2000("AA06EA01.csv",",",7,1,2,3)
+>> cwa2000("AA06EA01.csv",",",7,1,2,3)
 ans =  6
 >> jma("AA06EA01.csv",",",7,1,2,3,100)
 ans =  5.1000
->> cwb2020("AA06EA01.csv",",",7,1,2,3,100)
+>> cwa2020("AA06EA01.csv",",",7,1,2,3,100)
 ans = 5-
 ```
 
