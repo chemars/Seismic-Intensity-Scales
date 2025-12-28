@@ -5,13 +5,6 @@
 % Not accurate
 % https://github.com/chemars/Seismic-Intensity-Scales
 function II = csis(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
-% filename = "T073001.263.txt";
-% delimiter = "";
-% ignore_row = 11;
-% ns_column = 3;
-% ew_column = 4;
-% ud_column = 2;
-% sample_rate = 200;
 pkg load signal
 data = dlmread(filename,delimiter,ignore_row,0);
 ns = 0.01 * data(:,ns_column);
@@ -37,18 +30,18 @@ ud_vf = filter(b,a,ud_v);
 tvf = sqrt(ns_vf.^2 + ew_vf.^2 + ud_vf.^2);
 pgv = max(tvf);
 
-ia = 3.17 * log10(pga) + 6.59
-iv = 3.00 * log10(pgv) + 9.77
+ia = 3.17 * log10(pga) + 6.59;
+iv = 3.00 * log10(pgv) + 9.77;
 if (ia >= 6.0 && iv >= 6.0)
-  it = iv
+  it = iv;
 else
-  it = (ia + iv) / 2
+  it = (ia + iv) / 2;
 endif
 if (it < 1.0)
   II = 1.0;
 elseif (it > 12.0)
   II = 12.0;
 else
-II = floor(10 * it) / 10
+II = floor(10 * it) / 10;
 endif
 endfunction
