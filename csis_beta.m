@@ -2,9 +2,9 @@
 % License: MIT License
 %
 % Calculate the Chinese seismic intensity scale (GB/T 17742-2020)
-% Not accurate
+% Incomplete
 % https://github.com/chemars/Seismic-Intensity-Scales
-function II = csis(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
+function II = csis_beta(filename,delimiter,ignore_row,ns_column,ew_column,ud_column,sample_rate)
 pkg load signal
 data = dlmread(filename,delimiter,ignore_row,0);
 ns = 0.01 * data(:,ns_column);
