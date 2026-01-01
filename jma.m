@@ -1,4 +1,4 @@
-% Copyright (c) 2019-2025 chemars
+% Copyright (c) 2019-2026 chemars
 % License: MIT License
 % The code is modified from https://tinyurl.com/yxhdj5nc
 %

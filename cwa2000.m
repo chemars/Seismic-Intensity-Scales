@@ -1,4 +1,4 @@
-% Copyright (c) 2019-2025 chemars
+% Copyright (c) 2019-2026 chemars
 % License: MIT License
 %
 % Calculate the CWA seismic intensity (promulgated and revised on 2000-08-01)

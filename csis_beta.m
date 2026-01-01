@@ -1,4 +1,4 @@
-% Copyright (c) 2024-2025 chemars
+% Copyright (c) 2024-2026 chemars
 % License: MIT License
 %
 % Calculate the Chinese seismic intensity scale (GB/T 17742-2020)
